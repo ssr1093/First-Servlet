@@ -28,10 +28,10 @@ public class AddServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int i = Integer.parseInt(request.getParameter("num1"));
 		int j = Integer.parseInt(request.getParameter("num2"));
-		int k = i+j;
+		int k = Integer.parseInt(request.getParameter("num3"));
+		int a = i+j+k;
 		PrintWriter out = response.getWriter();
-		out.print("<h1>Addition of "+i+" and "+ j+" "
-				+ " is " +k);
+		out.print("<h1>Addition of "+i+" and "+ j+" and " +k+ " is " +a);
 		}
 
 }
